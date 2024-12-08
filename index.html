@@ -1,10 +1,47 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://sites.google.com/view/wstoapp/" />
-    <title>Redirecting...</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTMLBuilder</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png">
 </head>
 <body>
-    <p>Redirecting to <a href="https://sites.google.com/view/wstoapp/">main website</a>...</p>
+  <header class="top-bar">
+    <div class="logo"><img src="images/logo hb.png" alt="Logo" width="75" height="auto"></div>
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <select class="dropbtn">
+            <option value="" disabled selected>Create New App +</option>
+            <option value="editor">Windows</option>
+            <option value="" disabled selected>Mac (coming soon)</option>
+            <option value="" disabled selected>Linux (coming soon)</option>
+          </select>
+        </li>
+        <li><a href="https://discord.gg/95mGMaFu9r">Join Our Discord</a></li>
+        <li><a href="#idk">Documentation</a></li>
+      </ul>
+    </nav>
+    <div class="input-group">
+      <input type="text" placeholder="Website Title...">
+      <input type="file" id="file-upload">
+      <label for="file-upload" class="custom-file-upload"><img src="images/upload.png" alt="Upload" width="25" height="auto">Upload your Icon!</label>
+    </div>
+  </header>
+  <script>
+    var pageContent = {
+      paragraphs: []
+    };
+
+    document.querySelector('.dropbtn').addEventListener('change', function() {
+      var selectedValue = this.value;
+      if (selectedValue) {
+        window.location.href = selectedValue;
+      }
+    });
+  </script>
 </body>
 </html>
